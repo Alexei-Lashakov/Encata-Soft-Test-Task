@@ -9,16 +9,16 @@
     <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
                  [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
       <mat-nav-list>
-        <a mat-list-item routerLink=".">Link 1</a>
-        <a mat-list-item routerLink=".">Link 2</a>
-        <a mat-list-item routerLink=".">Link 3</a>
-        <a mat-list-item routerLink=".">Link 4</a>
-        <a mat-list-item routerLink=".">Link 5</a>
+        <a mat-list-item [routerLink]="['/']">Login</a>
+        <a mat-list-item [routerLink]="['/registration']">Registration</a>
+        <a mat-list-item [routerLink]="['/table']">Table</a>
+        <a mat-list-item [routerLink]="['/parameterized']">Parameterized</a>
+        <a mat-list-item [routerLink]="['/parent']">Interactions</a>
       </mat-nav-list>
     </mat-sidenav>
 
     <mat-sidenav-content>
-      <p>odsijfsdhofasidhfoasdhfoasdihfoasdhfoasdhfosdfhosadf</p>
+      <ng-content></ng-content>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>
