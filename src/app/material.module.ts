@@ -4,7 +4,10 @@ import {
   MatButtonModule, 
   MatSidenavModule, 
   MatIconModule, 
-  MatListModule 
+  MatListModule,
+  MatInputModule,
+  MatFormFieldModule,
+  MatDialogModule,
 } from '@angular/material';
 import { LayoutModule } from '@angular/cdk/layout';
 
@@ -16,6 +19,9 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatDialogModule,
   ],
   exports: [
     MatToolbarModule,
@@ -24,6 +30,9 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatDialogModule,
   ]
 })
 export class MaterialModule { }
