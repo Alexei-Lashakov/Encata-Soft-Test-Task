@@ -15,6 +15,7 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './parent/child/child.component';
 import { MaterialModule } from './material.module';
 import { ErrorDialogComponent } from './error-dialog/error-dialog.component';
+import { ParamChildComponent } from './param-child/param-child.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ErrorDialogComponent } from './error-dialog/error-dialog.component';
     ParentComponent,
     ChildComponent,
     ErrorDialogComponent,
+    ParamChildComponent,
   ],
   entryComponents: [ErrorDialogComponent],
   imports: [
