@@ -1,3 +1,43 @@
-<p>
-  registration works!
-</p>
+<mat-toolbar color="primary">
+  <span class="fill-remaining-space">Registration Form</span>
+</mat-toolbar>
+<form [formGroup]="registrForm"(ngSubmit)="registrate()" novalidate>
+
+  <mat-form-field class="form-element">
+    <input matInput placeholder="Name" formControlName="name">
+    <mat-error *ngIf="!registrForm.controls['name'].valid && registrForm.controls['name'].touched">
+        {{ getErrorName() }}
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="form-element">
+    <input matInput placeholder="email or phone number" formControlName="emailOrPhone" >
+    <mat-error *ngIf="!registrForm.controls['emailOrPhone'].valid && registrForm.controls['emailOrPhone'].touched">
+      {{ getErrorEmailOrPhone() }}
+    </mat-error>
+  </mat-form-field>
+
+  <div formGroupName="passwordGroup">
+    <mat-form-field class="form-element">
+      <input matInput [type]="hide ? 'text' : 'password'" placeholder="Password" formControlName="password">
+      <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+      <mat-hint>Choose a password of at least eight characters, one uppercase letter and one number</mat-hint>
+      <mat-error *ngIf="!registrForm.controls['passwordGroup'].controls['password'].valid && registrForm.controls['passwordGroup'].controls['password'].touched">
+        {{ getErrorPassword() }}
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form-element">
+      <input matInput [type]="hide ? 'text' : 'password'" placeholder="Confirm password" formControlName="pconfirm" [errorStateMatcher]="errorMatcher">
+      <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+      <mat-hint>Type your password again</mat-hint>
+     <mat-error *ngIf="registrForm.controls['passwordGroup'].hasError('equal')">
+        Passwords do not match 
+     </mat-error>
+    </mat-form-field>
+  </div>
+
+  <div class="form-element">
+    <button mat-raised-button color="primary" type="submit" class="button" [disabled]="!registrForm.valid">Registrate</button>
+  </div>
+</form>
