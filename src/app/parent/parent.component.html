@@ -1,3 +1,7 @@
-<p>
-  parent works!
-</p>
+<h1 style="text-align: center">This is parent component</h1>
+<h2 style="text-align: center">Total transfered: {{transfered}}</h2>
+<div class="container">
+  <app-child (sended)="transferToSecond($event)" [nowReceived]="forSendingToFirst"></app-child>
+  <app-child (sended)="transferToThird($event)" [nowReceived]="forSendingToSecond"></app-child>
+  <app-child (sended)="transferToFirst($event)" [nowReceived]="forSendingToThird"></app-child>
+</div>

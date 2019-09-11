@@ -12,10 +12,9 @@ import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { ParameterizedComponent } from './parameterized/parameterized.component';
 import { ParentComponent } from './parent/parent.component';
-import { ChildComponent } from './child/child.component';
+import { ChildComponent } from './parent/child/child.component';
 import { MaterialModule } from './material.module';
 import { ErrorDialogComponent } from './error-dialog/error-dialog.component';
-
 
 @NgModule({
   declarations: [

@@ -8,6 +8,8 @@ import {
   MatInputModule,
   MatFormFieldModule,
   MatDialogModule,
+  MatCardModule,
+  MatDividerModule,
 } from '@angular/material';
 import { LayoutModule } from '@angular/cdk/layout';
 
@@ -22,6 +24,8 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatInputModule,
     MatFormFieldModule,
     MatDialogModule,
+    MatCardModule,
+    MatDividerModule,
   ],
   exports: [
     MatToolbarModule,
@@ -33,6 +37,8 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatInputModule,
     MatFormFieldModule,
     MatDialogModule,
+    MatCardModule,
+    MatDividerModule,
   ]
 })
 export class MaterialModule { }
